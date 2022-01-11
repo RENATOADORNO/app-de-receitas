@@ -15,21 +15,22 @@ export default function ProgressIngredients({ ingredientsArr, measureArr,
 
   return (
     <div>
-      <h3>Ingredientes</h3>
+      <h2 className="Ingredients">Ingredientes</h2>
+      <div className="IntructionParagraph">
       { ingredientsArr
         .map((ite, index) => (
           <div key={ ite }>
             <label
-              className="checkIngredient"
               htmlFor={ ite }
               value={ ite }
               data-testid={ `${index}-ingredient-step` }
               onChange={ () => onCheckBoxChange(idReceita, ite) }
             >
               <input type="checkbox" id={ ite } />
-              {`- ${ite} - ${measureArr[index]}`}
+              {` - ${ite} - ${measureArr[index]}`}
             </label>
           </div>))}
+      </div>
     </div>
   );
 }
