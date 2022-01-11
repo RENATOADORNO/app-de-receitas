@@ -3,6 +3,8 @@ import { Link, useLocation } from 'react-router-dom'; // REF: https://v5.reactro
 import profileIcon from '../images/profileIcon.svg';
 import searchIcon from '../images/searchIcon.svg';
 import SearchBar from './SearchBar';
+import { BiSearchAlt } from "react-icons/bi";
+import { BsPersonFill } from "react-icons/bs";
 
 function Header() {
   const [mustRenderSearchBar, setMustRenderSearchBar] = React.useState(false);
@@ -60,33 +62,43 @@ function Header() {
 
   return (
     <header>
-      <div>
-        <Link to="/perfil">
-          <img
-            data-testid="profile-top-btn"
-            src={ profileIcon }
-            alt="Ícone default de perfil"
-          />
-        </Link>
-        <h1 data-testid="page-title">{ definePageName(currentPathName) }</h1>
-        {(currentPathName === '/comidas'
-        || currentPathName === '/bebidas'
-        || currentPathName === '/explorar/comidas/area') && (
-          <button
-            type="button"
-            onClick={ renderSearchBar }
+      <div className="section__header">
+        <div className="header__icon">
+          <Link className="header__icon" to="/perfil">
+            <BsPersonFill
+              className="header__icon--person"
+              src={ profileIcon }
+              alt="Ícone default de perfil"
+            />
+          </Link>
+        </div>
+        <div className="header__tilte">
+          <h1
+            className="header__tilte--h1"
+            data-testid="page-title"
           >
-            <img
+            { definePageName(currentPathName) }
+          </h1>
+        </div>
+        <div className="header__icon">
+          {(currentPathName === '/comidas'
+          || currentPathName === '/bebidas'
+          || currentPathName === '/explorar/comidas/area') && (
+            <BiSearchAlt
+              onClick={ renderSearchBar }
+              className="header__icon--search"
               data-testid="search-top-btn"
               src={ searchIcon }
               alt="Ícone default de pesquisa"
             />
-          </button>
+          )}
+        </div>
+      </div>
+      <div>
+        {mustRenderSearchBar && (
+          <SearchBar />
         )}
       </div>
-      {mustRenderSearchBar && (
-        <SearchBar />
-      )}
     </header>
   );
 }

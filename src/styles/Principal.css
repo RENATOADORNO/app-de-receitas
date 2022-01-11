@@ -254,4 +254,40 @@ textarea {
   width: 7rem;
 }
 
+/*======================= LOGIN ============================================*/
 
+.section__header {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--first-color);
+  padding: .5rem;
+}
+
+.header__tilte {
+  font-size: var(--h2-font-size);
+  cursor: default;
+}
+
+.header__tilte--h1 {
+  color: #FFF;
+}
+
+.header__icon--search {
+  color: #FFF;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.header__icon--person {
+  color: #FFF;
+  font-size: 2.5rem;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.header__icon {
+  display: inline-flex;
+}
