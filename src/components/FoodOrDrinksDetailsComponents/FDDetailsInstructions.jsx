@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 function FDDetailsInstructions({ recipeInfo }) {
   return (
     <div>
-      <h3>Instructions</h3>
-      <p data-testid="instructions">{recipeInfo.strInstructions}</p>
+      <h3 className="Instructions">Instructions</h3>
+      <p className="IntructionParagraph" data-testid="instructions">{recipeInfo.strInstructions}</p>
     </div>
   );
 }

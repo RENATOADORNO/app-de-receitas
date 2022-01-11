@@ -7,7 +7,10 @@
   padding: 0.5%;
   position: fixed;
   text-align: center;
-  width: 100%;
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 3%;
 }
 
 .scroll {
@@ -16,7 +19,7 @@
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  width: 300px;
+  width: 400px;
 }
 
 .scroll div {
@@ -25,3 +28,57 @@
 }
 
 .scroll img { border: 0;}
+
+.Video {
+  margin-left: 2%;
+  margin-top: 3%;
+}
+
+.IntructionParagraph {
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 96%;
+  padding: 2%;
+  background-color: #A7A7A9;
+  color: white;
+}
+
+.Instructions {
+  margin-left: 2%;
+}
+
+.Ingredients {
+  margin-left: 2%;
+  margin-top: 14%;
+}
+
+.title {
+  margin-left: 2%;
+}
+
+.buttons {
+  margin-left: 79%;
+  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: -14%;
+}
+
+.subTitle {
+  margin-left: 2%;
+  color: #A7A7A9
+}
+
+.ItemRecomended {
+  background-color: #EEF0F2;
+  border-radius: 6%;
+  margin: 2%;
+  padding: 2%;
+  -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+	-moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.77);
+	box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.77); /* REF SOMBRA: https://www.devmedia.com.br/css3-box-shadow-generator/28786 */
+}
+
+.ImgRecomended {
+  border-radius: 7%;
+}

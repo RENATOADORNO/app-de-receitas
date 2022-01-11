@@ -9,7 +9,7 @@ function FDDetailsRecommended({ recommendedFD, currentPathName }) {
 
   return (
     <div className="recommendedCardsContainer">
-      <h1>Recomendações</h1>
+      <h1 className="title">Recomendações</h1>
       { currentPathName.includes('bebidas')
         ? (
           <div className="meal scroll">
@@ -18,7 +18,7 @@ function FDDetailsRecommended({ recommendedFD, currentPathName }) {
                 <div
                   key={ index }
                   data-testid={ `${index}-recomendation-card` }
-                  className="eachRecommendedCard"
+                  className="ItemRecomended"
                   onClick={ () => history.push(`/comidas/${item.idMeal}`) }
                   onKeyDown={ () => history.push(`/comidas/${item.idMeal}`) }
                   role="button"
@@ -27,6 +27,7 @@ function FDDetailsRecommended({ recommendedFD, currentPathName }) {
                   <img
                     src={ item.strMealThumb }
                     alt={ item.strMeal }
+                    className="ImgRecomended"
                     width="150px"
                   />
                   <h2 data-testid={ `${index}-recomendation-title` }>{item.strMeal}</h2>
@@ -41,7 +42,7 @@ function FDDetailsRecommended({ recommendedFD, currentPathName }) {
                 <div
                   key={ index }
                   data-testid={ `${index}-recomendation-card` }
-                  className="eachRecommendedCard"
+                  className="ItemRecomended"
                   onClick={ () => history.push(`/bebidas/${item.idDrink}`) }
                   onKeyDown={ () => history.push(`/bebidas/${item.idDrink}`) }
                   role="button"
@@ -50,6 +51,7 @@ function FDDetailsRecommended({ recommendedFD, currentPathName }) {
                   <img
                     src={ item.strDrinkThumb }
                     alt={ item.strDrink }
+                    className="ImgRecomended"
                     width="150px"
                   />
                   <h2 data-testid={ `${index}-recomendation-title` }>{item.strDrink}</h2>
