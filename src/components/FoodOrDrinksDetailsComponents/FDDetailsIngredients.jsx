@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 function FDDetailsIngredients({ ingredientsArr, measureArr }) {
   return (
     <div>
-      <h3>Ingredients</h3>
-      <ul>
+      <h3 className="Ingredients">Ingredients</h3>
+      <ul className="IntructionParagraph">
         { ingredientsArr
           .map((ite, index) => (
             <li
