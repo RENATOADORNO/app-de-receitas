@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import '../styles/Profile.css'
 
 function Profile() {
   const [userMailObjLs, setUserMailObjLs] = React.useState('');
@@ -14,8 +15,8 @@ function Profile() {
   return (
     <div>
       <Header />
-      <h3 data-testid="profile-email">{userMailObjLs !== null && userMailObjLs.email}</h3>
-      <section id="profilePageBtnsContainer">
+      <h3 className="Email" data-testid="profile-email">{userMailObjLs !== null && userMailObjLs.email}</h3>
+      <section className="ButtonsFilterProfile" id="profilePageBtnsContainer">
         <button
           data-testid="profile-done-btn"
           type="button"

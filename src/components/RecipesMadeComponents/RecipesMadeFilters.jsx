@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function RecipesMadeFilters({ setSelectFilter }) {
   return (
-    <div>
+    <div className="ButtonsFilter">
       <button
         data-testid="filter-by-all-btn"
         type="button"
