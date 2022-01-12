@@ -19,14 +19,16 @@ function DrinkMadeCard({ doneRecipesArray }) {
               <img
                 data-testid={ `${index}-horizontal-image` }
                 src={ rec.image }
+                className="ImgItemFavorite"
                 alt="Imagem da Receita"
                 width="160px"
               />
             </Link>
             <div className="FavoriteNameAndType">
-            <h4 data-testid={ `${index}-horizontal-top-text` }>{rec.alcoholicOrNot}</h4>
+            <h4 className="TitleRecipesMade" data-testid={ `${index}-horizontal-top-text` }>{rec.alcoholicOrNot}</h4>
             <Link
               to={ `/bebidas/${rec.id}` }
+              className="TitleRecipesMade"
               data-testid={ `${index}-horizontal-name` }
             >
               {rec.name}

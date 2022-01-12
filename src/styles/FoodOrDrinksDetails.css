@@ -38,17 +38,28 @@
   margin-right: 2%;
   width: 96%;
   padding: 2%;
-  background-color: #A7A7A9;
-  color: white;
+  /* background-color: #A7A7A9;
+  color: white; */
 }
 
 .Instructions {
   margin-left: 2%;
+  width: 96%;
+  background-color: var(--first-color);
+  color: white;
 }
 
 .Ingredients {
   margin-left: 2%;
   margin-top: 14%;
+  background-color: var(--first-color);
+  width: 96%;
+  color: white;
+}
+
+.IngredientsItens {
+  margin-left: 5%;
+  list-style: disc;
 }
 
 .title {
@@ -68,8 +79,13 @@
   color: #A7A7A9
 }
 
+.TitleRecomended {
+  margin-left: 2%;
+  color: white;
+}
+
 .ItemRecomended {
-  background-color: #EEF0F2;
+  background-color: var(--first-color);
   border-radius: 6%;
   margin: 2%;
   padding: 2%;

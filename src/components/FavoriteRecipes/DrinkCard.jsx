@@ -21,6 +21,7 @@ export default function DrinkCard({ favoriteRecipesArray }) {
               <img
                 data-testid={ `${index}-horizontal-image` }
                 src={ rec.image }
+                className="ImgItemFavorite"
                 alt="Imagem da Receita"
                 width="160px"
               />
@@ -29,6 +30,7 @@ export default function DrinkCard({ favoriteRecipesArray }) {
             <h4 className="FavoriteName" data-testid={ `${index}-horizontal-top-text` }>{rec.alcoholicOrNot}</h4>
             <Link
               to={ `/bebidas/${rec.id}` }
+              className="FavoriteName"
               data-testid={ `${index}-horizontal-name` }
             >
               {rec.name}

@@ -41,6 +41,7 @@ function ExploreDrinkIngredients() {
               >
                 <img
                   data-testid={ `${ind}-card-img` }
+                  className="ImgIngredients"
                   width="150px"
                   src={ `https://www.thecocktaildb.com/images/ingredients/${strIngredient1}-Small.png` }
                   alt="Foto do Ingrediente"

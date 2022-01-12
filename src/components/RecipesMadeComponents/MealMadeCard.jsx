@@ -18,6 +18,7 @@ function MealMadeCard({ doneRecipesArray }) {
             >
               <img
                 src={ rec.image }
+                className="ImgItemFavorite"
                 alt="Imagem da Receita"
                 data-testid={ `${index}-horizontal-image` }
                 width="160px"
@@ -26,11 +27,13 @@ function MealMadeCard({ doneRecipesArray }) {
             <div className="FavoriteNameAndType">
             <h4
               data-testid={ `${index}-horizontal-top-text` }
+              className="TitleRecipesMade"
             >
               {`${rec.area} - ${rec.category}`}
             </h4>
             <Link
               to={ `/comidas/${rec.id}` }
+              className="TitleRecipesMade"
               data-testid={ `${index}-horizontal-name` }
             >
               {rec.name}

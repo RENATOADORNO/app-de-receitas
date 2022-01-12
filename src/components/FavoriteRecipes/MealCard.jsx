@@ -20,6 +20,7 @@ export default function MealCard({ favoriteRecipesArray }) {
             >
               <img
                 src={ rec.image }
+                className="ImgItemFavorite"
                 alt="Imagem da Receita"
                 data-testid={ `${index}-horizontal-image` }
                 width="150px"
@@ -33,6 +34,7 @@ export default function MealCard({ favoriteRecipesArray }) {
               {`${rec.area} - ${rec.category}`}
             </h4>
             <Link
+              className="FavoriteName"
               to={ `/comidas/${rec.id}` }
               data-testid={ `${index}-horizontal-name` }
             >
