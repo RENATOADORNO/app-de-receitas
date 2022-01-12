@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../../styles/FavoriteRecipes.css'
 
 export default function FavoriteRecipesFilters({ setSelectFilter }) {
   return (
-    <div>
+    <div className="ButtonsFilter">
       <button
         data-testid="filter-by-all-btn"
         type="button"

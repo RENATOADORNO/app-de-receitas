@@ -1,0 +1,8 @@
+.ButtonsFilterProfile {
+    display: grid;
+ }
+ 
+ .Email {
+     display: flex;
+     justify-content: center;
+ }

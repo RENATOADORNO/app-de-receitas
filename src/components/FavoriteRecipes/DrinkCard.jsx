@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
 import ShareBtn from './FavoriteRecipeShareBtn';
 import BtnFavoriteRecipe from './BtnFavoriteRecipe';
+import '../../styles/FavoriteRecipes.css'
 
 export default function DrinkCard({ favoriteRecipesArray }) {
   const location = useLocation();
@@ -13,7 +14,7 @@ export default function DrinkCard({ favoriteRecipesArray }) {
       {favoriteRecipesArray.map((rec, index) => (
         rec.type === 'bebida'
         && (
-          <div key={ index }>
+          <div className="ItemFavorite" key={ index }>
             <Link
               to={ `/bebidas/${rec.id}` }
             >
@@ -24,14 +25,17 @@ export default function DrinkCard({ favoriteRecipesArray }) {
                 width="160px"
               />
             </Link>
-            <h4 data-testid={ `${index}-horizontal-top-text` }>{rec.alcoholicOrNot}</h4>
+            <div className="FavoriteNameAndType">
+            <h4 className="FavoriteName" data-testid={ `${index}-horizontal-top-text` }>{rec.alcoholicOrNot}</h4>
             <Link
               to={ `/bebidas/${rec.id}` }
               data-testid={ `${index}-horizontal-name` }
             >
               {rec.name}
             </Link>
+            </div>
             <p data-testid={ `${index}-horizontal-done-date` }>{rec.doneDate}</p>
+            <div className="ButtonsFavAndSha">
             <ShareBtn
               index={ index }
               recipeId={ rec.id }
@@ -42,6 +46,7 @@ export default function DrinkCard({ favoriteRecipesArray }) {
               recipeId={ rec.id }
               index={ index }
             />
+            </div>
           </div>)
       ))}
     </div>

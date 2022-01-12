@@ -12,7 +12,7 @@ function MealMadeCard({ doneRecipesArray }) {
       {doneRecipesArray.map((rec, index) => (
         rec.type === 'comida'
         && (
-          <div key={ rec.id }>
+          <div className="ItemFavorite" key={ rec.id }>
             <Link
               to={ `/comidas/${rec.id}` }
             >
@@ -23,6 +23,7 @@ function MealMadeCard({ doneRecipesArray }) {
                 width="160px"
               />
             </Link>
+            <div className="FavoriteNameAndType">
             <h4
               data-testid={ `${index}-horizontal-top-text` }
             >
@@ -43,11 +44,14 @@ function MealMadeCard({ doneRecipesArray }) {
                 {tag}
               </p>
             ))}
+            <div>
             <RecipeMadeShareBtn
               index={ index }
               recipeId={ rec.id }
               currentPathName={ currentPathName }
             />
+            </div>
+            </div>
           </div>)
       ))}
     </div>
