@@ -32,25 +32,29 @@ function FoodCategoriesFilter({ setIsCategoryPressed }) {
   };
 
   return (
-    <div className="Search">
-      <button
-        data-testid="All-category-filter"
-        type="button"
-        onClick={ () => onAllCategoryClick() }
-      >
-        All
-      </button>
-      {mealsCategoriesArr.filter((_mealCat, i) => (i <= four))
-        .map((category) => (
-          <button
-            key={ category.strCategory }
-            data-testid={ `${category.strCategory}-category-filter` }
-            type="button"
-            onClick={ (e) => onFoodCategoryClick(e) }
-          >
-            {category.strCategory}
-          </button>
-        ))}
+    <div className="section__filter">
+      <div className="filters grid">
+        <button
+          className="button--filter"
+          data-testid="All-category-filter"
+          type="button"
+          onClick={ () => onAllCategoryClick() }
+        >
+          All
+        </button>
+        {mealsCategoriesArr.filter((_mealCat, i) => (i <= four))
+          .map((category) => (
+            <button
+              className="button--filter"
+              key={ category.strCategory }
+              data-testid={ `${category.strCategory}-category-filter` }
+              type="button"
+              onClick={ (e) => onFoodCategoryClick(e) }
+            >
+              {category.strCategory}
+            </button>
+          ))}
+      </div>
     </div>
   );
 }

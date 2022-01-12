@@ -291,3 +291,36 @@ textarea {
 .header__icon {
   display: inline-flex;
 }
+
+.filters {
+  display: grid;
+  grid-template-columns: .1fr .1fr;
+  row-gap: .2rem;
+  margin: .5rem;
+  column-gap: .2rem;
+}
+
+.button--filter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--first-color);
+  color: #FFF;
+  padding: .7rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+  font-size: var(--small-font-size);
+  width: 8rem;
+  margin: .5rem;
+  padding: .3rem .3rem;
+}
+
+.button--filter:hover {
+  background-color: var(--first-color-alt);
+}
+
+.section__filter {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
