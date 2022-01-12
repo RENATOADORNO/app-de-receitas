@@ -7,13 +7,13 @@ function FoodCard({ mealsArray }) {
   const history = useHistory();
 
   return (
-    <div className="foodCardsContainer">
+    <div className="FoodOrDrinkCardsContainer">
       {mealsArray.filter((_meal, i) => (i <= eleven))
         .map((item, index) => (
           <div
             key={ item.idMeal }
             data-testid={ `${index}-recipe-card` }
-            className="eachFoodCard"
+            className="ItemFoodOrDrink"
             onClick={ () => history.push(`/comidas/${item.idMeal}`) }
             onKeyDown={ () => history.push(`/comidas/${item.idMeal}`) }
             role="button"
@@ -25,7 +25,7 @@ function FoodCard({ mealsArray }) {
               width="150px"
               data-testid={ `${index}-card-img` }
             />
-            <h2 data-testid={ `${index}-card-name` }>{item.strMeal}</h2>
+            <h2 className="NameFoodOrDrink" data-testid={ `${index}-card-name` }>{item.strMeal}</h2>
           </div>
         ))}
     </div>

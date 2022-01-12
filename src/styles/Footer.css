@@ -10,7 +10,5 @@
 
 .websiteFooter div {
   display: flex;
-  justify-content: space-evenly;
-  margin: 0 35%;
-  width: 30%;
+  justify-content: space-around;
 }

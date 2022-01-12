@@ -73,9 +73,7 @@
   border-radius: 6%;
   margin: 2%;
   padding: 2%;
-  -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
-	-moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.77);
-	box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.77); /* REF SOMBRA: https://www.devmedia.com.br/css3-box-shadow-generator/28786 */
+	box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77); /* REF SOMBRA: https://www.devmedia.com.br/css3-box-shadow-generator/28786 */
 }
 
 .ImgRecomended {
