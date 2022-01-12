@@ -35,4 +35,15 @@
 .NameFoodOrDrink {
     display: flex;
     justify-content: center;
+    text-align: center;
+}
+
+.SelectOrigin {
+    width: 70%;
+    text-align: center;
+    margin-left: 15%;
+}
+
+.OptionsOrigin {
+    max-width: 70%;
 }

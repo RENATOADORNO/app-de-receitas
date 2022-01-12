@@ -25,9 +25,11 @@ function ExploreDrinkIngredients() {
         <Link
           to="/bebidas"
         >
+          <div className="FoodOrDrinkCardsContainer">
           {allDrinkIngredientsArr.filter((_ing, index) => index <= eleven)
             .map(({ strIngredient1 }, ind) => (
               <div
+                className="ItemFoodOrDrink"
                 data-testid={ `${ind}-ingredient-card` }
                 key={ ind }
                 onClick={ () => localStorage
@@ -39,12 +41,15 @@ function ExploreDrinkIngredients() {
               >
                 <img
                   data-testid={ `${ind}-card-img` }
+                  width="150px"
                   src={ `https://www.thecocktaildb.com/images/ingredients/${strIngredient1}-Small.png` }
                   alt="Foto do Ingrediente"
                 />
-                <h4 data-testid={ `${ind}-card-name` }>{strIngredient1}</h4>
+                <h4 className="NameFoodOrDrink" data-testid={ `${ind}-card-name` }>{strIngredient1}</h4>
               </div>
             ))}
+          </div>
+          
         </Link>
       </section>
       <Footer />
