@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMeals as fetchMealsThunk } from '../redux/actions/apiAC';
+import '../styles/FoodsAndDrinks.css'
 
 function FoodCategoriesFilter({ setIsCategoryPressed }) {
   const mealsCategoriesArr = useSelector((state) => state.foodsAndDrinks.mealsCategories);
@@ -31,7 +32,7 @@ function FoodCategoriesFilter({ setIsCategoryPressed }) {
   };
 
   return (
-    <div className="foodCategoriesFilterContainer">
+    <div className="Search">
       <button
         data-testid="All-category-filter"
         type="button"

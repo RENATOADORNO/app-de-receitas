@@ -30,8 +30,8 @@ function FDDetailsRecommended({ recommendedFD, currentPathName }) {
                     className="ImgRecomended"
                     width="150px"
                   />
-                  <h2 data-testid={ `${index}-recomendation-title` }>{item.strMeal}</h2>
-                  <h4>{item.strCategory}</h4>
+                  <h2 className="TitleRecomended" data-testid={ `${index}-recomendation-title` }>{item.strMeal}</h2>
+                  <h4 className="subTitle">{item.strCategory}</h4>
                 </div>
               ))}
           </div>)
@@ -54,8 +54,8 @@ function FDDetailsRecommended({ recommendedFD, currentPathName }) {
                     className="ImgRecomended"
                     width="150px"
                   />
-                  <h2 data-testid={ `${index}-recomendation-title` }>{item.strDrink}</h2>
-                  <h4>{item.strCategory}</h4>
+                  <h2 className="TitleRecomended" data-testid={ `${index}-recomendation-title` }>{item.strDrink}</h2>
+                  <h4 className="subTitle">{item.strCategory}</h4>
                 </div>
               ))}
           </div>)}

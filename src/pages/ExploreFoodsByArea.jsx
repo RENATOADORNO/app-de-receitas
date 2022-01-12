@@ -48,6 +48,7 @@ function ExploreFoodsByArea() {
       <Header />
       <section>
         <select
+          className="SelectOrigin"
           data-testid="explore-by-area-dropdown"
           onChange={ ({ target }) => setChosenArea(target.value) }
         >
@@ -55,6 +56,7 @@ function ExploreFoodsByArea() {
           {allMealAreas.map(({ strArea }) => (
             <option
               key={ strArea }
+              className="OptionsOrigin"
               data-testid={ `${strArea}-option` }
             >
               {strArea}

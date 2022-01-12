@@ -25,9 +25,11 @@ function ExploreFoodIngredients() {
         <Link
           to="/comidas"
         >
+          <div className="FoodOrDrinkCardsContainer">
           {allMealIngredientsArr.filter((_ing, index) => index <= eleven)
             .map(({ idIngredient, strIngredient }, ind) => (
               <div
+                className="ItemFoodOrDrink"
                 data-testid={ `${ind}-ingredient-card` }
                 key={ idIngredient }
                 onClick={ () => localStorage
@@ -39,12 +41,16 @@ function ExploreFoodIngredients() {
               >
                 <img
                   data-testid={ `${ind}-card-img` }
+                  className="ImgIngredients"
+                  width="150px"
                   src={ `https://www.themealdb.com/images/ingredients/${strIngredient}-Small.png` }
                   alt="Foto do Ingrediente"
                 />
-                <h4 data-testid={ `${ind}-card-name` }>{strIngredient}</h4>
+                <h4 className="NameFoodOrDrink" data-testid={ `${ind}-card-name` }>{strIngredient}</h4>
               </div>
             ))}
+          </div>
+          
         </Link>
       </section>
       <Footer />

@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import fetchDrinks, { fetchMeals as fetchMealsThunk } from '../redux/actions/apiAC';
+import '../styles/FoodsAndDrinks.css'
 
 function SearchBar() {
   const [searchedItem, setSearchedItem] = React.useState('');
@@ -50,7 +51,7 @@ function SearchBar() {
   };
 
   return (
-    <div>
+    <div className="Search">
       <input
         type="text"
         data-testid="search-input"
@@ -58,6 +59,7 @@ function SearchBar() {
         value={ searchedItem }
         onChange={ ({ target }) => setSearchedItem(target.value) }
       />
+      <div className="SearchFilters">
       <label htmlFor="ingredientRdBtn">
         <input
           data-testid="ingredient-search-radio"
@@ -67,6 +69,7 @@ function SearchBar() {
           value="ingredientRdBtn"
           onChange={ ({ target }) => setChosenRadioBtn(target.value) }
         />
+        {' '}
         Ingrediente
       </label>
       <label htmlFor="foodNameRdBtn">
@@ -78,6 +81,7 @@ function SearchBar() {
           value="foodNameRdBtn"
           onChange={ ({ target }) => setChosenRadioBtn(target.value) }
         />
+        {' '}
         Nome
       </label>
       <label htmlFor="foodFirstLetterRdBtn">
@@ -89,11 +93,14 @@ function SearchBar() {
           value="foodFirstLetterRdBtn"
           onChange={ ({ target }) => setChosenRadioBtn(target.value) }
         />
+        {' '}
         Primeira letra
       </label>
+      </div>
       <button
         data-testid="exec-search-btn"
         type="button"
+        className="SearchButton"
         onClick={ onSearchClick }
       >
         Buscar

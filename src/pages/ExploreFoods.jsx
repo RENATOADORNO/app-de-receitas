@@ -21,7 +21,7 @@ function ExploreFoods() {
   return (
     <div>
       <Header />
-      <section id="exploreFoodsBtnsContainer">
+      <section className="SearchFilters" id="exploreFoodsBtnsContainer">
         <button
           data-testid="explore-by-ingredient"
           type="button"

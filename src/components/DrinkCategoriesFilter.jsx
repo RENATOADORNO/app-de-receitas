@@ -31,7 +31,7 @@ function DrinkCategoriesFilter({ setIsCategoryPressed }) {
   };
 
   return (
-    <div className="foodCategoriesFilterContainer">
+    <div className="Search">
       <button
         data-testid="All-category-filter"
         type="button"

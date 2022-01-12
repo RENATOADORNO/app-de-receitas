@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 function FDDetailsIngredients({ ingredientsArr, measureArr }) {
   return (
     <div>
-      <h3 className="Ingredients">Ingredients</h3>
+      <h2 className="Ingredients">Ingredients</h2>
       <ul className="IntructionParagraph">
         { ingredientsArr
           .map((ite, index) => (
             <li
+              className="IngredientsItens"
               data-testid={ `${index}-ingredient-name-and-measure` }
               key={ ite }
             >

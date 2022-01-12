@@ -1,6 +1,7 @@
 .ButtonsFilter {
     display: flex;
     justify-content: space-around;
+    margin-top: 2%;
 }
 
 .ItemFavorite {
@@ -11,17 +12,19 @@
     padding: 2%;
     width: 92%;
     border-radius: 3%;
-    background-color: #EEF0F2;
+    background-color: var(--first-color);
 	box-shadow: 0px 7px 5px rgba(50, 50, 50, 0.77);
 }
 
 .FavoriteNameAndType {
   margin-left: 2%;
   margin-top: 2%;
+  color: white;
 }
 
 .FavoriteName {
   width: 100%;
+  color: white;
 }
 
 .ButtonsFavAndSha {
@@ -35,4 +38,12 @@
 
 .ButtonFavorite {
     margin-left: 240%;
+}
+
+.ImgItemFavorite {
+  border-radius: 6%;
+}
+
+.TitleRecipesMade {
+  color: white;
 }
